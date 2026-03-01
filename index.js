@@ -77,7 +77,7 @@ app.use("/",(req,res,next)=>{
     res.locals.currentUser=req.user;
     next();
 })
-app.get("/home",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("./pages/home.ejs")
 })
 app.use("/", user)
