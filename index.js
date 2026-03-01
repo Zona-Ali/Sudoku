@@ -77,13 +77,13 @@ app.use("/",(req,res,next)=>{
     res.locals.currentUser=req.user;
     next();
 })
-
-app.use("/", user)
-app.use("/sudokuSolver", sudokuSolver)
-app.use("/sudokuPlay", sudokuPlay)
 app.get("/home",(req,res)=>{
     res.render("./pages/home.ejs")
 })
+app.use("/", user)
+app.use("/sudokuSolver", sudokuSolver)
+app.use("/sudokuPlay", sudokuPlay)
+
 
 
 app.listen(8080,()=>{
