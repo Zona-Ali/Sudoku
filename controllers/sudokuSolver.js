@@ -10,7 +10,7 @@ module.exports.sudokuSolverSol = (req, res) => {
 
     if (!validInp(intArr)) {
         req.flash("error", "THIS IS INVALID SUDOKU");
-        return res.redirect("/sudokuSolve");
+        return res.redirect("/sudokuSolver");
     } else {
         let sudokuValues = solve(intArr)
         res.render("./pages/solverAns.ejs", { sudokuValues })
