@@ -1,0 +1,60 @@
+<% layout('/layout/boilerplate') -%>
+
+    <body>
+
+        <H1>SODOKU SOLVER</H1>
+
+        <form action="/sudokuSolver" method="post">
+            <table>
+                <% for (let i=0; i < 9; i++) { %>
+                    <tr>
+                        <% for (let j=0; j < 9; j++) { let index=i * 9 + j; %>
+                            <td>
+                                <input class="cell" type="number" name="arr" max="9" min="1" readonly>
+                            </td>
+                            <% } %>
+                    </tr>
+                    <% } %>
+            </table>
+
+            <div class="m-auto mt-3">
+                <button type="reset" class="px-3 py-1" style="background-color: #eff898;;">Reset</button> &nbsp;
+                <button type="submit" class="px-3 py-1" style="background-color: #eff898;;">Submit</button>
+            </div>
+        </form>
+        <div id="number-pad">
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+
+
+        </div>
+    </body>
+
+    <script>
+        let selectedCell = null;
+
+        const cells = document.querySelectorAll(".cell");
+        const numbers = document.querySelectorAll(".num");
+
+        cells.forEach(cell => {
+            cell.addEventListener("click", function () {
+                selectedCell = this;
+            });
+        });
+
+        numbers.forEach(num => {
+            num.addEventListener("click", function () {
+                if (selectedCell !== null) {
+                    selectedCell.value = this.textContent;
+                }
+            });
+        });
+
+    </script>

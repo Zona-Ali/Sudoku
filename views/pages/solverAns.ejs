@@ -1,0 +1,20 @@
+<% layout('/layout/boilerplate') -%>
+
+    <body>
+        <H1>SOLUTION</H1>
+        <table style="margin: auto; margin-bottom: 3rem;">
+
+            <% for (let i=0; i < 9; i++) { %>
+                <tr>
+                    <% for (let j=0; j < 9; j++) { let index=i * 9 + j; %>
+                        <td id="solutionTD" style="background-color: aliceblue;">
+                            <%= sudokuValues[index] !==0 ? sudokuValues[index] : "" %>
+                        </td>
+                        <% } %>
+                </tr>
+                <% } %>
+
+
+        </table>
+
+    </body>

@@ -1,0 +1,55 @@
+<% layout('/layout/boilerplate') -%>
+  <script>
+    let g = <%- JSON.stringify(sol) %>;
+
+
+    </script>
+<body>
+    
+     
+         <h1>LEVEL : <%= lev %></h1>
+    <div class="lifeline ">
+        <h5 id="timer">00:00</h5>
+    <div class="ms-auto">
+        <i class="fa-solid fa-heart" id="h1"></i><i class="fa-solid fa-heart" id="h2"></i><i class="fa-solid fa-heart" id="h3"></i>
+    </div>
+    </div>
+    <form action="/sudokuPlay/<%=lev%>" method="post" id="form">
+   <table >
+      <% for (let i = 0; i < 9; i++) { %>
+        <tr>
+            <% for (let j = 0; j < 9; j++) { 
+                let index = i * 9 + j;
+            %>
+            <td id="c<%= index %>">
+                    <% if (arr[index]==0){%>
+                    <input type="number" name="arr" max="9" min="1" class="cell" id="i<%= index%>" readonly>
+                    <%} else{%>
+                         <%=arr[index]%>
+                        <%}%>
+                </td>
+            <% } %>
+        </tr>
+    <% } %>
+
+
+</table>
+</form>
+<div id="number-pad" class="mx-auto p-2">
+    <button class="num">1</button>
+    <button class="num">2</button>
+    <button class="num">3</button>
+    <button class="num">4</button>
+    <button class="num">5</button>
+    <button class="num">6</button>
+    <button class="num">7</button>
+    <button class="num">8</button>
+    <button class="num">9</button>
+</div>
+<form action="/sudokuPlay/over" method="get" id="lose">
+    </form>
+    <script src="../js/play.js"></script>
+</body>
+
+
+

@@ -1,0 +1,25 @@
+<% layout('/layout/boilerplate') -%>
+
+    <body>
+        <h1>SignUp on Play</h1>
+        <form method="post" action="/signup" class="form g-3 needs-validation" novalidate>
+            <div>
+                <div>
+                    <lable class="form-label">Username: </lable>
+                    <input class="form-control" type="text" name="username" required><br>
+                </div>
+
+                <div>
+                    <lable class="form-label">Email: </lable>
+                    <input class="form-control" type="text" name="email" required><br>
+                </div>
+                <div>
+                    <lable class="form-label">Password: </lable>
+                    <input class="form-control" type="password" name="password" required><br>
+                </div>
+
+
+                <button class="mb-5 px-3 py-1" style="background-color: #eff898;">Signup</button>
+            </div>
+        </form>
+    </body>

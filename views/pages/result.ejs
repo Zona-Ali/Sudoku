@@ -1,0 +1,43 @@
+<% layout('/layout/boilerplate') -%>
+    <link rel="stylesheet" href="/css/result.css">
+
+    <body>
+        <% function formatTime(totalSeconds) { let minutes=Math.floor(totalSeconds / 60); let seconds=totalSeconds % 60;
+            return String(minutes).padStart(2, "0" ) + ":" + String(seconds).padStart(2, "0" ); } %>
+
+
+            <h3>Level-<%= l %>
+            </h3>
+            Total Time --&gt; <%= time %><BR>
+                Best time --&gt; <%= formatTime(user[levelField]) %>
+                    <h3>TRY AGAIN</h3>
+                    <a href="/sudokuPlay"><i class="fa-solid fa-rotate-left"></i></a>
+
+                    <h3> Leaderboad</h3>
+                    <table id="r">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let rank=1; %>
+                                <% for (let l of list) { %>
+                                    <tr>
+                                        <td>
+                                            <%= rank++ %>
+                                        </td>
+                                        <td>
+                                            <%= l.username %>
+                                        </td>
+                                        <td>
+                                            <%= formatTime(l[levelField]) %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                        </tbody>
+                    </table>
+
+    </body>

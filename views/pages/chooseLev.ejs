@@ -1,0 +1,16 @@
+<% layout('/layout/boilerplate') -%>
+
+<body>
+     <form action="/sudokuPlay" method="post">
+
+          <h3>SELECT LEVEL...</h3>
+          <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="lev">
+               <option value="1">Easy</option>
+               <option value="2">Medium</option>
+               <option value="3">Hard</option>
+               <option value="4">Extreme</option>
+          </select>
+
+          <button class="mb-5 px-3 py-1" style="background-color: #eff898;">Submit</button>
+     </form>
+</body>
