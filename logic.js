@@ -85,7 +85,7 @@ function displaygame(lev) {
 
     for (let i = 0; i < n; i++) {
         let b = arr[i];
-        display[b] = sudokuValues[b];
+        display[b] = sud[b];
     }
     return display;
 }
