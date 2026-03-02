@@ -6,9 +6,6 @@ for (let i = 0; i < 81; i++) {
     sudokuValues[i] = 0;
     display[i] = 0;
 }
-
-//................................FOR PLAYING SUDOKU............................................
-function play(lev) {
     let sud =[2,9,6,3,1,8,7,5,4,
  4,1,3,7,5,9,2,8,6,
  8,7,5,4,6,2,9,1,3,
@@ -18,6 +15,10 @@ function play(lev) {
  5,3,9,6,4,7,8,2,1,
  6,4,8,1,2,5,3,9,7,
  1,2,7,8,9,3,5,4,6]
+
+//................................FOR PLAYING SUDOKU............................................
+function play(lev) {
+
     // solve(sudokuValues); //...GET THE EMPTY GRID -> SOLVE IT -> GIVES THE SAME ANSWER ALL THE TIME... 
     rand(sud);  //...MANIPULATE THE SUDOKU TO GENERATE A UNIQUE GRID...
     let display = displaygame(lev);  //...HIDE SOME OF THE NUMBERS AND DISPLAY THE GAME...

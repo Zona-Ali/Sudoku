@@ -13,10 +13,10 @@ module.exports.displayLev = (req, res) => {
 
 module.exports.prepLev = async (req, res) => {
     let { lev } = req.params;
-    let { display, sudokuValues } = play(lev);
-    req.session.sol = sudokuValues;
+    let { display, sud } = play(lev);
+    req.session.sol = sud;
     req.session.startTime = new Date().getTime();
-    res.render("./pages/play.ejs", { arr: display, sol: sudokuValues, lev: lev })
+    res.render("./pages/play.ejs", { arr: display, sol: sud, lev: lev })
 }
 
 module.exports.playLev = async (req, res) => {
