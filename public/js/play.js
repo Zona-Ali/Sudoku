@@ -36,7 +36,7 @@ numbers.forEach(num => {
                     h1.style.color = "transparent";
                      stopTimer()
 
-                    form.requestSubmit();  
+                    l.requestSubmit();  
                 }
                 setTimeout(() => {
                     selectedCell.style.backgroundColor = "pink";
@@ -88,5 +88,3 @@ function stopTimer() {
 }
 
 startTimer()
-
-console.log(g)
