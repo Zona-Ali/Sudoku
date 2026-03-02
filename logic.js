@@ -47,7 +47,7 @@ function solve(sudokuValues) {
 }
 
 
-function rand(sudokuValues) {
+function rand() {
     for (let swap = 0; swap < 9; swap++) {
 
         let a = Math.floor(Math.random() * 9) + 1;
@@ -58,10 +58,10 @@ function rand(sudokuValues) {
         }
 
         for (let idx = 0; idx < 81; idx++) {
-            if (sudokuValues[idx] === a) {
-                sudokuValues[idx] = b;
-            } else if (sudokuValues[idx] === b) {
-                sudokuValues[idx] = a;
+            if (sud[idx] === a) {
+                sud[idx] = b;
+            } else if (sud[idx] === b) {
+                sud[idx] = a;
             }
         }
     }
