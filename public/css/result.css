@@ -11,9 +11,7 @@
     padding: 10px;
      border: 0.18rem solid black;
 } 
-#r #k{
-    background-color:  #eff898 !important;
-}
+
 
  #r tr:nth-child(odd) {
     background-color: #93a4ff !important;
@@ -26,6 +24,10 @@
  #r th {
     border: 0.18rem solid black;
     
+}
+
+#r #k{
+    background-color:  #eff898 !important;
 }
 /* Column widths */
  #r th:nth-child(1), #r  td:nth-child(1) { width: 20%; }
