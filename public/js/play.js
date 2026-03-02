@@ -36,7 +36,7 @@ numbers.forEach(num => {
                     h1.style.color = "transparent";
                      stopTimer()
 
-                    l.requestSubmit();  
+                    form.requestSubmit();  
                 }
                 setTimeout(() => {
                     selectedCell.style.backgroundColor = "pink";
