@@ -13,11 +13,11 @@
 } 
 
 
- #r tbody tr:nth-child(odd) {
+ #f tr:nth-child(odd) {
     background-color: #93a4ff !important;
 }
 
- #r tbody tr:nth-child(even) {
+ #f tr:nth-child(even) {
     background-color: #93a3ff77 !important;
 }
 
