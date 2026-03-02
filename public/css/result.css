@@ -11,15 +11,13 @@
     padding: 10px;
      border: 0.18rem solid black;
 } 
-#k{
+
+
+ #r tr:nth-child(odd) {
     background-color: #93a4ff !important;
 }
 
- #f tr:nth-child(odd) {
-    background-color: #93a4ff !important;
-}
-
- #f tr:nth-child(even) {
+ #r tr:nth-child(even) {
     background-color: #93a3ff77 !important;
 }
 
