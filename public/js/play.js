@@ -89,4 +89,3 @@ function stopTimer() {
 
 startTimer()
 
-console.log(g)
